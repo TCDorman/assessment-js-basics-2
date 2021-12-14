@@ -111,25 +111,25 @@ const pizza =
 let foodArr = [
     {
         name: `taco`,
-        price: (25),
+        price: 25),
         category: (`Entre`),
-        popularity: (10),
-        rating: (9),
+        popularity: 10),
+        rating: 9),
         tags: [`chicken`, `cheese`, `rice`, `beans`]
     },
     {
         name: `hotdog`,
-        price: (6),
+        price: 6),
         category: (`Entre`),
-        popularity: (7),
-        rating: (8),
+        popularity: 7),
+        rating: 8,
         tags: [`hotdog`, `bun`, `chili`, `cheese`]
     },
     {
         name: `Hamburger`,
-        price: (10),
+        price: 10,
         category: (`Entre`),
-        popularity: (8),
+        popularity: 8,
         rating: (6),
         tags: [`burger`, `cheese`, `bun`, `pickles`]
     },
@@ -181,6 +181,10 @@ console.log(filteredTags())
 let {tags} = foodArr
 console.log({tags})
 
+// Answer ========= 
+// const filteredFood = foodArr.filter(item => item.tags.includes(`pasta`))
+// console.log(filteredFood)
+
 
 //////////////////PROBLEM 5////////////////////
 /* 
@@ -222,7 +226,16 @@ console.log({tags})
 */
 
 //CODE HERE
-
+const filterByProperty = (property, number, type) => {
+    const results = foodArr.filter(item => {
+        if(type === `above`){
+            return item[property] > number
+        } else if (type === `below`){
+            return item[property] < number
+        }
+    })
+    return results
+}
 
 /*
     Invoke the `filterByProperty` function passing
@@ -232,3 +245,5 @@ console.log({tags})
 */
 
 //CODE HERE
+
+console.log(filterByProperty(`price`, 10, `above`))

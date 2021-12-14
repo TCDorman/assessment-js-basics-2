@@ -27,12 +27,9 @@ class Employee {
         this.shifts = shifts;
     }
     getSchedule(){
-        console.log(this.name `works on` .shifts)
-    } 
-}
-console.log(Employee(this.name, this.shifts))
-let employee1 = new Employee(`Colin`, `Day`)
-
+        console.log(`${this.name} works on ${this.shifts}`)
+    }
+} 
 /*
     Create a new instance of your class.
     Save it to a variable called `empOne`.
@@ -45,13 +42,14 @@ let employee1 = new Employee(`Colin`, `Day`)
 
 //CODE HERE
 
+
 /*
     Call the `getSchedule` method on the
     `empOne` object.
 */
 
 //CODE HERE
-
+//empOne.getSchedule()
 
 /*
     Make a copy of the empOne object
@@ -66,6 +64,7 @@ let employee1 = new Employee(`Colin`, `Day`)
 */
 
 //CODE HERE
+const empTwo = {...empOne, name: `Nick`}
 
 
 
@@ -99,10 +98,10 @@ class Manager extends Employee {
         this.employees = employees
     }
     getEmployees(){
-        console.log(this.name `and` .employees)
+        console.log(`${this.name} and ${this.employees}`)
     }
     addEmployee(emp){
-        this.emp = emp
+        this.employees.push(emp)
     }
 }
 
@@ -120,7 +119,7 @@ class Manager extends Employee {
 */
 
 //CODE HERE
-
+const manager = new Manager(`Winston`, `weekday mornings, weekday afternoons`, [`CeCe`, `Schmidt`])
 
 /*
     Call the `getEmployees` method on the
@@ -128,7 +127,7 @@ class Manager extends Employee {
 */
 
 //CODE HERE
-
+manager.getEmployees()
 /*
     Call the `addEmployee` method on the 
     `manager` object passing in the string 
@@ -136,7 +135,7 @@ class Manager extends Employee {
 */
 
 //CODE HERE 
-
+manager.addEmployee(`Coach`)
 /*
     Call the `getEmployees` method on the
     `manager` object again to confirm 
@@ -144,3 +143,6 @@ class Manager extends Employee {
 */
 
 //CODE HERE
+
+manager.getEmployees()
+manager.getSchedule()
