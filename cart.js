@@ -18,6 +18,16 @@
     the food. 
 */
 
+const customer = [
+    {
+        name: 'Colin',
+        phoneNum: '513-759-1586',
+        email: 'cdorman@gmail.com',
+        favFood: 'pizza',
+        amtSpent: 10
+    }
+]
+
 const cart = [
     {
         name: 'pizza', 
@@ -35,7 +45,7 @@ const cart = [
 
 //CODE HERE
 
-const summedPrice = cart.reduce((acc, cb) => acc + cv.price, 0)
+const summedPrice = cart.reduce((acc, cb) => acc + cb.price, 0)
 console.log(summedPrice)
 
 //////////////////PROBLEM 2////////////////////
@@ -80,6 +90,7 @@ console.log(calcFinalPrice(20, 1, .07))
 */
 
 /*
+    ***OUTLINE***
     The resturaunt will need the customer name for obvious reasons. A name will be a string.
     They will aslo need the customers favorite menu items to provide a better experience. this is a string because it is a word
     Having their emails as well as their phone numbers for promotional purposes is good as well. This is a string because we will not be using any math functions on the phone number.

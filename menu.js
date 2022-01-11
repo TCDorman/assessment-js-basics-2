@@ -111,24 +111,24 @@ const pizza =
 let foodArr = [
     {
         name: `taco`,
-        price: 25),
-        category: (`Entre`),
-        popularity: 10),
-        rating: 9),
+        price: 25,
+        category: `Entre`,
+        popularity: 10,
+        rating: 9,
         tags: [`chicken`, `cheese`, `rice`, `beans`]
     },
     {
         name: `hotdog`,
-        price: 6),
+        price: 6,
         category: (`Entre`),
-        popularity: 7),
+        popularity: 7,
         rating: 8,
         tags: [`hotdog`, `bun`, `chili`, `cheese`]
     },
     {
         name: `Hamburger`,
         price: 10,
-        category: (`Entre`),
+        category: `Entre`,
         popularity: 8,
         rating: (6),
         tags: [`burger`, `cheese`, `bun`, `pickles`]
@@ -136,17 +136,17 @@ let foodArr = [
     {
         name: `salad`,
         price: (14),
-        category: (`Entre`),
-        popularity: (5),
-        rating: (10),
+        category: `Entre`,
+        popularity: 5,
+        rating: 10,
         tags: [`lettuce`, `nuts`, `vinegrette`, `onions`]
     },
     {
         name: `beef bowl`,
-        price: (15),
-        category: (`Entre`),
-        popularity: (10),
-        rating: (9),
+        price: 15,
+        category: `Entre`,
+        popularity: 10,
+        rating: 9,
         tags: [`beef`, `peppers`, `rice`, `onions`]
     }
 
@@ -167,9 +167,9 @@ let foodArr = [
 
 //CODE HERE
 const foodArrTags = (foodItem, tag) => {
-    foodItem.tags[` `]
+    foodItem.tags['']
 }
-return foodArrTags()
+return foodArrTags('beef bowl')
 const filteredTags = (foodArr, cb, tags) => {
     foodArr.forEach((foodItem) => {
         cb(foodItem, tags)

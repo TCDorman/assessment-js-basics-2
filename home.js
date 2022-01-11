@@ -22,11 +22,11 @@
 */
 
 //CODE HERE
-// let greetUser = (username) => {
-//     return `Welcome back, ` + username
+let greetUser = (username) => {
+    return `Welcome back, ` + username
 }
-// console.log(greetUser(`[USERNAME]`))
-// console.log(greetUser(`Andrew`))
+console.log(greetUser(`[USERNAME]`))
+console.log(greetUser(`Goofy`))
 
 
 //////////////////PROBLEM 2////////////////////
@@ -49,29 +49,22 @@
         // `You're in our delivery zone!`
 */
 
-// const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
+const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
 
 //CODE HERE
-// const canWeDeliver = (zip) => {
-//     for(let i = 0; i < deliveryAreaZipCodes.length; i++){
-//         if(deliveryAreaZipCodes[i] === zip){
-//             return `you are in our delivery zone`
-//         }else{
-//             return `you are not in our delivery zone`
-//         }
-//     }
-// }
-// console.log(canWeDeliver(84606))
-// console.log(canWeDeliver(85204))
-
-let canWeDeliver = deliveryAreaZipCodes => {
-        if( !== deliveryAreaZipCodes) {
-            return `Sorry, we can't deliver to that address`
-        } else if (canWeDeliver === deliveryAreaZipCodes) { 
-            return `You're in our delivery zone!`
+const canWeDeliver = (zip) => {
+    for(let i = 0; i < deliveryAreaZipCodes.length; i++){
+        if(deliveryAreaZipCodes[i] == zip){
+            return `you are in our delivery zone`
+        }else{
+            return `you are not in our delivery zone`
         }
     }
-    console.log(canWeDeliver(95204))
+}
+console.log(canWeDeliver(84606))
+console.log(canWeDeliver(85204))
+
+
 
 
 
@@ -95,16 +88,16 @@ let canWeDeliver = deliveryAreaZipCodes => {
 */
 
 // CODE HERE
-// const canWeDeliverTwo = (zip) => {
-//     const zips = deliveryAreaZipCodes.filter(zipCode => zipCode === zip)
-//     if(zips.length > 0) {
-//         return `We can deliver to you`
-//     }else{
-//         return `Sorry, bro`
-//     }
-// }
+const canWeDeliverTwo = (zip) => {
+    const zips = deliveryAreaZipCodes.filter(zipCode => zipCode === zip)
+    if(zips.length > 0) {
+        return `We can deliver to you`
+    }else{
+        return `Sorry, we do not deliver to your area.`
+    }
+}
 
-// console.log(canWeDeliverTwo)
+console.log(canWeDeliverTwo(85205))
 
 //////////////////PROBLEM 3////////////////////
 /* 
@@ -140,8 +133,8 @@ const deals = [
 */
 
 //CODE HERE
-// deals[0].title = deals[0].title.replace(`15%`, `10%`)
-// console.log(deals[0].title)
+deals[0].title = deals[0].title.replace(`15%`, `10%`)
+console.log(deals[0].title)
 
 
 /*
@@ -158,5 +151,5 @@ const deals = [
 */
 
 //CODE HERE
-// deals[i].desc = deals[1].desc.replace(`march`, `April`).trim
-// console.log(deals)
+deals[1].desc = deals[1].desc.replace(`March`, `April`).trim
+console.log(deals)
